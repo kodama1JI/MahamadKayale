@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mohammad Kayali — Food Technology Engineer</title>
+  <meta name="description" content="Food Technology Engineer and academic laboratory supervisor. Microbiological analysis and food quality control.">
+  <meta name="theme-color" content="#FBF6EE">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23FBF6EE'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%23C46A2E' stroke-width='1.4'/%3E%3Ccircle cx='16' cy='16' r='2.2' fill='%236E7F45'/%3E%3C/svg%3E">
+  <script>
+    (function () {
+      var lang = "en";
+      var theme = "light";
+      try {
+        lang = localStorage.getItem("mk-lang") || "";
+        theme = localStorage.getItem("mk-theme") || "";
+      } catch (error) {}
+      if (lang !== "ar" && lang !== "en") {
+        lang = (navigator.language || "en").toLowerCase().indexOf("ar") === 0 ? "ar" : "en";
+      }
+      if (theme !== "dark") theme = "light";
+      var root = document.documentElement;
+      root.lang = lang;
+      root.dir = lang === "ar" ? "rtl" : "ltr";
+      root.dataset.theme = theme;
+      document.title = lang === "ar"
+        ? "محمد كيالي — مهندس تكنولوجيا أغذية"
+        : "Mohammad Kayali — Food Technology Engineer";
+      var themeMeta = document.querySelector('meta[name="theme-color"]');
+      if (themeMeta) themeMeta.setAttribute("content", theme === "dark" ? "#1C1612" : "#FBF6EE");
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#content">
+    <span class="en">Skip to content</span>
+    <span class="ar">تخطي إلى المحتوى</span>
+  </a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#hero">
+        <span class="en">Mohammad Kayali</span>
+        <span class="ar">محمد كيالي</span>
+      </a>
+
+      <nav id="site-nav" class="site-nav">
+        <a class="nav-link" href="#about"><span class="en">About</span><span class="ar">نبذة</span></a>
+        <a class="nav-link" href="#experience"><span class="en">Experience</span><span class="ar">الخبرة</span></a>
+        <a class="nav-link" href="#research"><span class="en">Research</span><span class="ar">الأبحاث</span></a>
+        <a class="nav-link" href="#laboratory"><span class="en">Laboratory</span><span class="ar">المخبر</span></a>
+        <a class="nav-link" href="#skills"><span class="en">Skills</span><span class="ar">المهارات</span></a>
+        <a class="nav-link" href="#education"><span class="en">Education</span><span class="ar">التعليم</span></a>
+        <a class="nav-link" href="#contact"><span class="en">Contact</span><span class="ar">تواصل</span></a>
+      </nav>
+
+      <div class="header-tools">
+        <div class="seg" id="lang-switch" role="group">
+          <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-set-lang="ar" aria-pressed="false">عربي</button>
+        </div>
+        <button type="button" class="theme-toggle" aria-pressed="false">
+          <span class="when-light en">Dark</span>
+          <span class="when-light ar">داكن</span>
+          <span class="when-dark en">Light</span>
+          <span class="when-dark ar">فاتح</span>
+        </button>
+        <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+          <span class="menu-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="hero" id="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="en">Food Technology Engineer</span>
+            <span class="ar">مهندس تكنولوجيا أغذية</span>
+          </p>
+          <h1>
+            <span class="en">Mohammad<br>Kayali</span>
+            <span class="ar">محمد<br>كيالي</span>
+          </h1>
+          <p class="accent-line">
+            <span class="en">Microbiological Analysis</span>
+            <span class="ar">التحاليل الميكروبيولوجية</span>
+          </p>
+          <p class="lede">
+            <span class="en">Laboratory and graduation-project supervisor at the Faculty of Technical Engineering since 2025, guiding food-engineering students and running microbiological and chemical food tests.</span>
+            <span class="ar">مشرف مخبر ومشاريع تخرج في كلية الهندسة التقنية منذ 2025، يوجّه طلاب هندسة الأغذية ويجري الفحوصات الميكروبيولوجية والكيميائية للأغذية.</span>
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">
+              <span class="en">Contact</span>
+              <span class="ar">تواصل</span>
+            </a>
+            <a class="btn" href="#laboratory">
+              <span class="en">Laboratory work</span>
+              <span class="ar">العمل المخبري</span>
+            </a>
+            <a class="btn btn-phone phone-ltr" href="tel:0962716407" dir="ltr">0962716407</a>
+          </div>
+        </div>
+
+        <div class="plate" aria-hidden="true">
+          <div class="hero-wash"></div>
+          <div class="colony-field">
+            <span class="spread spread-a"></span>
+            <span class="spread spread-b"></span>
+            <span class="colony colony-a"></span>
+            <span class="colony colony-b"></span>
+            <span class="colony colony-c"></span>
+            <span class="colony colony-d"></span>
+            <span class="colony colony-e"></span>
+            <span class="colony colony-f"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="wrap prose">
+        <div class="section-head reveal">
+          <p class="kicker">01</p>
+          <h2 class="section-title" id="about-title">
+            <span class="en">From food science to the teaching laboratory</span>
+            <span class="ar">من علم الأغذية إلى مخبر التعليم</span>
+          </h2>
+        </div>
+        <p class="full-title">
+          <span class="en">Food Technology Engineer | Specialist in Microbiological Analysis and Food Quality Control</span>
+          <span class="ar">مهندس تكنولوجيا أغذية | أخصائي تحاليل ميكروبيولوجية وضبط جودة الأغذية</span>
+        </p>
+        <p>
+          <span class="en">Mohammad Kayali holds a Bachelor of Technical Engineering, Food Technology Department. Since 2025 he has been Laboratory and Graduation-Project Supervisor at the Faculty of Technical Engineering.</span>
+          <span class="ar">يحمل محمد كيالي بكالوريوس في الهندسة التقنية، قسم تكنولوجيا الأغذية. ومنذ 2025 يعمل مشرف مخبر ومشاريع تخرج في كلية الهندسة التقنية.</span>
+        </p>
+        <p>
+          <span class="en">A Food Technology Engineer and academic laboratory supervisor, with practical experience overseeing food-engineering graduation projects and managing microbiological and chemical testing. His work covers detection of Gram-positive and Gram-negative bacteria, study of antimicrobial activity against pathogens, development of functional products fortified with probiotics, and food and water safety testing against microbiological standards.</span>
+          <span class="ar">مهندس تكنولوجيا أغذية ومشرف مخبر أكاديمي، ذو خبرة عملية في الإشراف على مشاريع تخرج مهندسي الأغذية وإدارة الفحوصات الجرثومية والكيميائية. خبرته في الكشف عن البكتيريا موجبة وسالبة غرام، ودراسة الفعالية المضادة للممرضات، وتطوير المنتجات الوظيفية المدعمة بالبروبيوتيك، واختبارات سلامة المياه والأغذية وفق المعايير الميكروبيولوجية.</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="kicker">02</p>
+          <h2 class="section-title" id="experience-title">
+            <span class="en">Experience</span>
+            <span class="ar">الخبرة</span>
+          </h2>
+        </div>
+
+        <div class="role-block">
+          <p class="dates">
+            <span class="en">2025 – present</span>
+            <span class="ar">2025 – حتى الآن</span>
+          </p>
+          <h3 class="role-title">
+            <span class="en">Laboratory and Graduation-Project Supervisor</span>
+            <span class="ar">مشرف مخبر ومشاريع تخرج</span>
+          </h3>
+          <p class="role-place">
+            <span class="en">Faculty of Technical Engineering</span>
+            <span class="ar">كلية الهندسة التقنية</span>
+          </p>
+        </div>
+
+        <ul class="duty-grid stagger">
+          <li class="card">
+            <h4>
+              <span class="en">Academic supervision</span>
+              <span class="ar">الإشراف الأكاديمي</span>
+            </h4>
+            <p>
+              <span class="en">Guiding students of the Faculty of Technical Engineering in graduation projects and field microbiological experiments.</span>
+              <span class="ar">توجيه وإشراف طلاب كلية الهندسة التقنية في تنفيذ مشاريع التخرج والتجارب الميكروبيولوجية الميدانية.</span>
+            </p>
+          </li>
+          <li class="card">
+            <h4>
+              <span class="en">Microbiological analysis</span>
+              <span class="ar">التحاليل الميكروبيولوجية</span>
+            </h4>
+            <p>
+              <span class="en">Performing and training students to detect Gram-positive and Gram-negative bacteria, study their behavior, assess their interaction with the food environment, and detect coliforms.</span>
+              <span class="ar">إجراء وتدريب الطلاب على الكشف عن البكتيريا موجبة وسالبة غرام، ودراسة سلوكها، وتقييم تفاعلها مع البيئة الغذائية، والكشف عن الجراثيم القولونية (Coliforms).</span>
+            </p>
+          </li>
+          <li class="card">
+            <h4>
+              <span class="en">Chemical and physical analysis</span>
+              <span class="ar">التحاليل الكيميائية والفيزيائية</span>
+            </h4>
+            <p>
+              <span class="en">Food quality tests including moisture, pH, protein, and sugars.</span>
+              <span class="ar">فحوصات الجودة للأغذية تشمل تحديد نسبة الرطوبة، ودرجة الحموضة (pH)، ونسب البروتين والسكريات.</span>
+            </p>
+          </li>
+          <li class="card">
+            <h4>
+              <span class="en">Laboratory development</span>
+              <span class="ar">إدارة وتطوير المعامل</span>
+            </h4>
+            <p>
+              <span class="en">Operating and evaluating the vacuum dryer for vegetables and fruit, then determining the microbial load.</span>
+              <span class="ar">تشغيل وتقييم أجهزة المجفف بالتفريغ (Vacuum Dryer) في معالجة الخضراوات والفواكه وتحديد الحمل الجرثومي بعدها.</span>
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="research" aria-labelledby="research-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="kicker">03</p>
+          <h2 class="section-title" id="research-title">
+            <span class="en">Work on the bench</span>
+            <span class="ar">عمل على طاولة المخبر</span>
+          </h2>
+        </div>
+
+        <div class="research-grid stagger">
+          <article class="card card-feature">
+            <p class="label">
+              <span class="en">Main graduation project</span>
+              <span class="ar">مشروع التخرج الرئيسي</span>
+            </p>
+            <h3>
+              <span class="en">Study of the antimicrobial activity of <i lang="la">Lactobacillus acidophilus</i> against pathogens isolated in the field from chicken-liver samples.</span>
+              <span class="ar">دراسة الفعالية المضادة لبكتيريا حمض اللبن (<i lang="la">Lactobacillus acidophilus</i>) تجاه الممرضات المعزولة ميدانياً من عينات كبد الدجاج.</span>
+            </h3>
+          </article>
+
+          <article class="card">
+            <h3>
+              <span class="en">Functional dairy products</span>
+              <span class="ar">المنتجات اللبنية الوظيفية</span>
+            </h3>
+            <p>
+              <span class="en">Fortifying yogurt with probiotic strains and assessing quality and preservation.</span>
+              <span class="ar">تدعيم اللبن بسلالات البروبيوتيك وتقييم جودته وحفظه.</span>
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>
+              <span class="en">Natural extracts against pathogens</span>
+              <span class="ar">المستخلصات الطبيعية ضد الممرضات</span>
+            </h3>
+            <p>
+              <span class="en">The antimicrobial effect of green thyme oil or extract on <i lang="la">Staphylococcus</i>.</span>
+              <span class="ar">دراسة التأثير المضاد لزيت أو مستخلص الزعتر الأخضر على جراثيم المكورات العنقودية (<i lang="la">Staphylococcus</i>).</span>
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>
+              <span class="en">Water safety in industry</span>
+              <span class="ar">سلامة المياه في الصناعة</span>
+            </h3>
+            <p>
+              <span class="en">Microbiological analysis of water in ice plants and ice factories, before and after freezing, to measure microbial contamination.</span>
+              <span class="ar">تحليل ميكروبيولوجي للمياه في معاطن ومعامل الثلج، قبل التجميد وبعده، لقياس التلوث الميكروبي.</span>
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>
+              <span class="en">Medical materials and equipment</span>
+              <span class="ar">المواد والمعدات الطبية</span>
+            </h3>
+            <p>
+              <span class="en">Assessing how several metal surfaces intended for medical equipment affect bacterial growth and survival.</span>
+              <span class="ar">تقييم تأثير أسطح معادن مخصصة للمعدات الطبية على نمو الجراثيم وبقائها.</span>
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>
+              <span class="en">Films and medical dressings</span>
+              <span class="ar">الأغشية والضمادات الطبية</span>
+            </h3>
+            <p>
+              <span class="en">The biological effect of a starch-based medical dressing, including microbiological safety and coliform detection.</span>
+              <span class="ar">الكشف عن الأثر الحيوي لضماد طبي مصنوع من النشاء، واختبار السلامة الميكروبيولوجية والكشف عن القولونيات.</span>
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>
+              <span class="en">Environment and natural filtration</span>
+              <span class="ar">البيئة والفلترة الطبيعية</span>
+            </h3>
+            <p>
+              <span class="en">How different soil layers purify and filter microbiologically contaminated water.</span>
+              <span class="ar">دراسة كفاءة طبقات التربة المختلفة في تنقية وفلترة المياه الملوثة ميكروبيولوجياً.</span>
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="laboratory" aria-labelledby="laboratory-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="kicker">04</p>
+          <h2 class="section-title" id="laboratory-title">
+            <span class="en">How a sample stays in view</span>
+            <span class="ar">كيف تبقى العينة تحت النظر</span>
+          </h2>
+        </div>
+
+        <div class="process-wrap">
+          <div class="process-line" aria-hidden="true"></div>
+          <ol class="process">
+            <li class="step">
+              <svg class="seal" viewBox="0 0 40 40" aria-hidden="true">
+                <circle class="seal-fill" cx="20" cy="20" r="16"></circle>
+                <circle class="seal-core" cx="20" cy="20" r="3"></circle>
+                <circle class="seal-ring" cx="20" cy="20" r="15"></circle>
+              </svg>
+              <p class="step-no">01</p>
+              <h3>
+                <span class="en">Sample and Gram stain</span>
+                <span class="ar">العينة وصبغة غرام</span>
+              </h3>
+              <p>
+                <span class="en">The sample is examined by Gram stain to detect Gram-positive and Gram-negative bacteria and to study their behavior.</span>
+                <span class="ar">تُفحَص العينة بصبغة غرام للكشف عن البكتيريا موجبة وسالبة غرام ودراسة سلوكها.</span>
+              </p>
+            </li>
+            <li class="step">
+              <svg class="seal" viewBox="0 0 40 40" aria-hidden="true">
+                <circle class="seal-fill" cx="20" cy="20" r="16"></circle>
+                <circle class="seal-core" cx="20" cy="20" r="3"></circle>
+                <circle class="seal-ring" cx="20" cy="20" r="15"></circle>
+              </svg>
+              <p class="step-no">02</p>
+              <h3>
+                <span class="en">Microbiological and chemical tests</span>
+                <span class="ar">التحاليل الميكروبيولوجية والكيميائية</span>
+              </h3>
+              <p>
+                <span class="en">Coliforms are detected, and food quality tests cover moisture, pH, protein, and sugars.</span>
+                <span class="ar">يُكشف عن الجراثيم القولونية، وتُجرى فحوصات الجودة: الرطوبة، ودرجة الحموضة (pH)، والبروتين، والسكريات.</span>
+              </p>
+            </li>
+            <li class="step">
+              <svg class="seal" viewBox="0 0 40 40" aria-hidden="true">
+                <circle class="seal-fill" cx="20" cy="20" r="16"></circle>
+                <circle class="seal-core" cx="20" cy="20" r="3"></circle>
+                <circle class="seal-ring" cx="20" cy="20" r="15"></circle>
+              </svg>
+              <p class="step-no">03</p>
+              <h3>
+                <span class="en">Drying and probiotic trials</span>
+                <span class="ar">التجفيف وتجارب البروبيوتيك</span>
+              </h3>
+              <p>
+                <span class="en">The vacuum dryer is operated and evaluated for vegetables and fruit, then the microbial load is determined, and yogurt is fortified with probiotic strains to assess quality and preservation.</span>
+                <span class="ar">يُشغَّل المجفف بالتفريغ للخضراوات والفواكه ويُقيَّم، ثم يُحدَّد الحمل الجرثومي، ويُدعَّم اللبن بسلالات البروبيوتيك مع تقييم جودته وحفظه.</span>
+              </p>
+            </li>
+            <li class="step">
+              <svg class="seal" viewBox="0 0 40 40" aria-hidden="true">
+                <circle class="seal-fill" cx="20" cy="20" r="16"></circle>
+                <circle class="seal-core" cx="20" cy="20" r="3"></circle>
+                <circle class="seal-ring" cx="20" cy="20" r="15"></circle>
+              </svg>
+              <p class="step-no">04</p>
+              <h3>
+                <span class="en">Food and water safety</span>
+                <span class="ar">سلامة الأغذية والمياه</span>
+              </h3>
+              <p>
+                <span class="en">Water in ice plants and ice factories is analyzed before and after freezing to measure microbial contamination.</span>
+                <span class="ar">تُحلَّل مياه معاطن ومعامل الثلج قبل التجميد وبعده لقياس التلوث الميكروبي.</span>
+              </p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="kicker">05</p>
+          <h2 class="section-title" id="skills-title">
+            <span class="en">Skills</span>
+            <span class="ar">المهارات</span>
+          </h2>
+        </div>
+        <ul class="skill-grid stagger">
+          <li class="card">
+            <h3>
+              <span class="en">Food microbiology</span>
+              <span class="ar">الميكروبيولوجيا الغذائية</span>
+            </h3>
+            <p>
+              <span class="en">Gram stain, isolation and identification of Gram-positive and Gram-negative bacteria, sensitivity and inhibition tests, coliform tests.</span>
+              <span class="ar">صبغ وعزل وتحديد البكتيريا (Gram+ / Gram-)، اختبارات الحساسية والتثبيط الجرثومي، والفحوصات القولونية.</span>
+            </p>
+          </li>
+          <li class="card">
+            <h3>
+              <span class="en">Food chemistry</span>
+              <span class="ar">الكيمياء الغذائية</span>
+            </h3>
+            <p>
+              <span class="en">Moisture, acidity, preservatives, sugars, and proteins.</span>
+              <span class="ar">قياس الرطوبة والحموضة، وتحليل المواد الحافظة والسكريات والبروتينات.</span>
+            </p>
+          </li>
+          <li class="card">
+            <h3>
+              <span class="en">Processing and preservation</span>
+              <span class="ar">تقنيات التصنيع والحفظ</span>
+            </h3>
+            <p>
+              <span class="en">Vacuum drying, probiotic fortification, and quality control of factory ice and water.</span>
+              <span class="ar">التجفيف بالتفريغ، والتدعيم بالبروبيوتيك، وضبط جودة الثلج ومياه المصانع.</span>
+            </p>
+          </li>
+          <li class="card">
+            <h3>
+              <span class="en">Supervision and documentation</span>
+              <span class="ar">الإدارة والتوجيه</span>
+            </h3>
+            <p>
+              <span class="en">Preparing laboratory protocols, guiding engineering students, and field research documentation.</span>
+              <span class="ar">إعداد البروتوكولات المخبرية، وتوجيه طلاب الهندسة، والتوثيق والأبحاث الميدانية.</span>
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="education" aria-labelledby="education-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="kicker">06</p>
+          <h2 class="section-title" id="education-title">
+            <span class="en">Education</span>
+            <span class="ar">التعليم</span>
+          </h2>
+        </div>
+        <article class="card education-card reveal">
+          <p>
+            <span class="en">Bachelor of Technical Engineering, Food Technology Department</span>
+            <span class="ar">بكالوريوس في الهندسة التقنية، قسم تكنولوجيا الأغذية</span>
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="kicker">07</p>
+          <h2 class="section-title" id="contact-title">
+            <span class="en">Available for food-technology and laboratory work</span>
+            <span class="ar">متاح لعمل تكنولوجيا الأغذية والمخبر</span>
+          </h2>
+        </div>
+        <div class="card contact-card reveal">
+          <p class="label">
+            <span class="en">Phone</span>
+            <span class="ar">الهاتف</span>
+          </p>
+          <p class="contact-phone-line">
+            <a class="contact-phone phone-ltr" href="tel:0962716407" dir="ltr">0962716407</a>
+          </p>
+          <p class="label">
+            <span class="en">Location</span>
+            <span class="ar">الموقع</span>
+          </p>
+          <p class="contact-location">
+            <span class="en">Syria</span>
+            <span class="ar">سوريا</span>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-line">
+      <span class="en">Mohammad Kayali</span>
+      <span class="ar">محمد كيالي</span>
+      <span aria-hidden="true">·</span>
+      <span class="en">Food Technology Engineer</span>
+      <span class="ar">مهندس تكنولوجيا أغذية</span>
+      <span aria-hidden="true">·</span>
+      <span id="year">2026</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
