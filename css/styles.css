@@ -322,14 +322,16 @@ html[lang="en"] .eyebrow {
 h1 {
   font-family: var(--serif);
   font-weight: 700;
-  font-size: clamp(2.8rem, 8vw, 5.75rem);
-  line-height: 0.95;
+  font-size: clamp(2.05rem, 5.5vw, 4.15rem);
+  line-height: 1.15;
   font-style: normal;
+  white-space: nowrap;
 }
 
 html[lang="ar"] h1 {
-  font-size: clamp(2.7rem, 8vw, 5.2rem);
-  line-height: 1.28;
+  font-size: clamp(2.2rem, 6vw, 4.4rem);
+  line-height: 1.35;
+  white-space: nowrap;
 }
 
 h1::after {
@@ -534,11 +536,90 @@ html[data-theme="dark"] .hero-wash {
 }
 
 .section {
+  position: relative;
+  z-index: 1;
   padding: 5.25rem 0;
   border-top: 1px solid var(--line);
 }
 
+main {
+  position: relative;
+}
+
+.bench {
+  position: absolute;
+  z-index: 0;
+  inset-inline: 0;
+  top: var(--bench-top, 100vh);
+  bottom: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.bench-heat {
+  position: absolute;
+  inset: -12% -8%;
+  background:
+    radial-gradient(ellipse 32% 24% at 14% 16%, rgba(196, 106, 46, 0.18), transparent 70%),
+    radial-gradient(ellipse 28% 22% at 86% 42%, rgba(110, 127, 69, 0.16), transparent 72%),
+    radial-gradient(ellipse 24% 20% at 38% 74%, rgba(196, 106, 46, 0.12), transparent 70%);
+  background-size: 150% 150%;
+  animation: bench-heat 16s ease-in-out infinite alternate;
+}
+
+.sample-track {
+  position: absolute;
+  top: 1.5rem;
+  bottom: 1.5rem;
+  inset-inline-start: max(0.85rem, calc((100% - 1160px) / 2));
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--lab) 10%, var(--lab) 90%, transparent);
+}
+
+.sample {
+  position: absolute;
+  top: 0;
+  inset-inline-start: -9px;
+  width: 19px;
+  height: 19px;
+  border: 1.5px solid var(--spice);
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--lab) 0 3px, transparent 3.5px);
+  box-shadow: 0 0 0 7px rgba(110, 127, 69, 0.18);
+  translate: 0 -50%;
+}
+
 .section-head {
+  position: relative;
+}
+
+.section-head::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  width: 5.25rem;
+  height: 5.25rem;
+  border: 1px solid rgba(196, 106, 46, 0.55);
+  border-radius: 50%;
+  box-shadow: 0 0 0 11px rgba(110, 127, 69, 0.12);
+  inset-inline-end: 0;
+  top: -0.35rem;
+  opacity: 0;
+  transform: scale(0.25);
+  pointer-events: none;
+}
+
+.section-head > * {
+  position: relative;
+  z-index: 1;
+}
+
+.js .section-head.is-visible::before {
+  animation: bloom 3.4s ease-out forwards;
+}
+
+.section-head {
+  position: relative;
   margin-bottom: 1.75rem;
 }
 
@@ -864,6 +945,25 @@ html[dir="rtl"] .process-line {
   }
 }
 
+@keyframes bench-heat {
+  from { background-position: 0% 20%; }
+  to { background-position: 100% 80%; }
+}
+
+@keyframes bloom {
+  0% {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+  40% {
+    opacity: 0.72;
+  }
+  100% {
+    opacity: 0.28;
+    transform: scale(1);
+  }
+}
+
 .js .reveal {
   opacity: 0;
   transform: translateY(12px);
@@ -983,6 +1083,10 @@ html[dir="rtl"] .process-line {
     justify-self: center;
   }
 
+  .sample-track {
+    display: none;
+  }
+
   .hero-actions {
     justify-content: flex-start;
   }
@@ -1043,7 +1147,10 @@ html[dir="rtl"] .process-line {
   .hero-wash,
   .colony-field,
   .colony,
-  .spread {
+  .spread,
+  .bench-heat,
+  .section-head::before,
+  .js .section-head.is-visible::before {
     animation: none;
   }
 
@@ -1058,6 +1165,12 @@ html[dir="rtl"] .process-line {
 
   .spread {
     opacity: 0;
+  }
+
+  .section-head::before,
+  .js .section-head.is-visible::before {
+    opacity: 0.28;
+    transform: none;
   }
 
   .js .reveal,

@@ -65,7 +65,7 @@
   }
 
   function applyTheme(theme) {
-    if (theme !== "dark") theme = "light";
+    theme = theme === "light" ? "light" : "dark";
     root.dataset.theme = theme;
     if (themeMeta) themeMeta.setAttribute("content", theme === "dark" ? "#1C1612" : "#FBF6EE");
     updateThemeLabel();
@@ -82,7 +82,7 @@
   if (year) year.textContent = String(new Date().getFullYear());
 
   applyLanguage(root.lang === "ar" ? "ar" : "en");
-  applyTheme(root.dataset.theme === "dark" ? "dark" : "light");
+  applyTheme(root.dataset.theme === "light" ? "light" : "dark");
 
   document.querySelectorAll("[data-set-lang]").forEach(function (button) {
     button.addEventListener("click", function () {
@@ -188,4 +188,36 @@
   }
 
   root.classList.add("js");
+
+  var bench = document.querySelector(".bench");
+  var sample = document.querySelector(".sample");
+  var hero = document.getElementById("hero");
+
+  function placeBench() {
+    if (!bench || !hero) return;
+    bench.style.top = hero.offsetHeight + "px";
+  }
+
+  function placeSample() {
+    if (!sample || !bench || reduceMotion) return;
+    var trackTop = bench.getBoundingClientRect().top + 24;
+    var trackHeight = bench.getBoundingClientRect().height - 48;
+    if (trackHeight <= 0) return;
+    var mark = window.innerHeight * 0.46;
+    var next = (mark - trackTop) / trackHeight;
+    if (next < 0) next = 0;
+    if (next > 1) next = 1;
+    sample.style.top = (next * 100) + "%";
+  }
+
+  placeBench();
+  if (reduceMotion && sample) sample.style.top = "12%";
+  else {
+    placeSample();
+    window.addEventListener("scroll", placeSample, { passive: true });
+    window.addEventListener("resize", function () {
+      placeBench();
+      placeSample();
+    });
+  }
 })();
